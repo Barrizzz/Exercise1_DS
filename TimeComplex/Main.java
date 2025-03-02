@@ -33,14 +33,32 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        /* 
-        Runnable task1 = () -> iterateCubes(5);
-        Runnable task2 = () -> iterateSquares(10);
+        // PERFORMANCE MATRICS
+            /* 
+            Runnable task1 = () -> iterateCubes(5);
+            Runnable task2 = () -> iterateSquares(10);
 
-        PerformanceMetrics.measureRuntime(task1);
-        System.out.println("===================================");
-        PerformanceMetrics.measureRuntime(task2); 
-        */
+            PerformanceMetrics.measureRuntime(task1);
+            System.out.println("===================================");
+            PerformanceMetrics.measureRuntime(task2); 
+            */
         
+        // COMPARING SORTING ALGORITHMS
+            
+            ArrayList<Integer> arr1 = new ArrayList<>(generateRandomArray(10000));
+            ArrayList<Integer> arr2 = new ArrayList<>(arr1);
+
+            Runnable task1 = () -> Sort.bubbleSort1(arr1);
+            Runnable task2 = () -> Sort.bubbleSort2(arr2);
+
+            PerformanceMetrics.measureRuntime(task1);
+            System.out.println("===================================");
+            PerformanceMetrics.measureRuntime(task2);
+            
+        
+        // INVENTORY SYSTEM
+
+    
+
     }
 }
